@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Library_deneme.Views.AddEditBookView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="Auto" Width="Auto">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Select Book:" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <ComboBox x:Name="BooksComboBox" Grid.Row="0" Margin="100,0,0,0" Width="300" SelectionChanged="BooksComboBox_SelectionChanged" Visibility="{Binding IsEditMode, Converter={StaticResource BoolToVisibilityConverter}}"/>
+
+        <Label Content="Title:" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="TitleTextBox" Grid.Row="1" Margin="100,0,0,0" Width="300"/>
+
+        <Label Content="Author:" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="AuthorTextBox" Grid.Row="2" Margin="100,0,0,0" Width="300"/>
+
+        <CheckBox x:Name="IsAvailableCheckBox" Content="Is Available" Grid.Row="3" Margin="100,10,0,0"/>
+
+        <Button Content="Save" Grid.Row="4" Width="100" HorizontalAlignment="Left" Margin="100,20,0,0" Click="SaveButton_Click"/>
+    </Grid>
+</UserControl>
