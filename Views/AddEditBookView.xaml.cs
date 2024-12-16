@@ -26,7 +26,7 @@ namespace Library_deneme.Views
 
         public AddEditBookView(DatabaseHelper dbHelper, bool isEditMode = false)
         {
-            InitializeComponent();
+            InitializeComponent(); // burda bi sakatlık var
             this.dbHelper = dbHelper;
             this.isEditMode = isEditMode;
 
